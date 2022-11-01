@@ -3,10 +3,7 @@ version: 1
 
 build_arg_defaults:
   EE_BASE_IMAGE: 'quay.io/ansible/creator-ee:latest'
-  # ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: '--no-deps'
-
 
 dependencies:
   galaxy: requirements.yml
   python: requirements.txt
-  # system: bindep.txt
