@@ -1,6 +1,0 @@
-# for awx - they haven't updated the deps yet :/
-# https://github.com/ansible/awx/blob/devel/awx_collection/bindep.txt
-# https://github.com/ansible/awx/issues/12674
-python3-pytz [platform:centos-8 platform:rhel-8]
-python3-requests [platform:centos-8 platform:rhel-8]
-python3-pyyaml [platform:centos-8 platform:rhel-8]
