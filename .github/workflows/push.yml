@@ -18,6 +18,8 @@ jobs:
       with:
         msg: ${{ github.repository }}
         separator: '/'
+    - name: Create EE context
+      run: ansible-builder create        
     - name: Build Image with Buildah
       id: build-image
       uses: redhat-actions/buildah-build@v2
@@ -25,7 +27,8 @@ jobs:
         image: ${{ steps.split.outputs._1 }}
         tags: latest ${{ github.sha }}
         containerfiles: |
-          ./context/Containerfile
+          ./Containerfile
+        context: context
     - name: Push to quay.io
       uses: redhat-actions/push-to-registry@v2
       with:
