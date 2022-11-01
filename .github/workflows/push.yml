@@ -27,7 +27,7 @@ jobs:
         image: ${{ steps.split.outputs._1 }}
         tags: latest ${{ github.sha }}
         containerfiles: |
-          ./Containerfile
+          ./context/Containerfile
         context: context
     - name: Push to quay.io
       uses: redhat-actions/push-to-registry@v2
