@@ -5,6 +5,8 @@ on:
     branches:
       - main
 jobs:
+  build:
+
   publish-lazy-me:
     runs-on: ubuntu-latest
     steps:
@@ -19,7 +21,9 @@ jobs:
         msg: ${{ github.repository }}
         separator: '/'
     - name: Create EE context
-      run: ansible-builder create        
+      run: ansible-builder create      
+    - name: dirty hack for dirty setup (mixing runner vs. creator ee here and awx collection failing to support python 3.9+)  
+      run: sed "/.*sanitize.*/a RUN sed -i '/python38/d' /tmp/src/bindep.txt" context/Containerfile
     - name: Build Image with Buildah
       id: build-image
       uses: redhat-actions/buildah-build@v2
