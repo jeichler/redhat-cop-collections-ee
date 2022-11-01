@@ -7,7 +7,7 @@ Since I do like to use the VSCode Plugin for Ansible, I wanted to have an EE bas
 
 === Where?
 
-The image is pushed to https://quay.io/repository/jaeichle/redhat-cop-collections-ee - the pipeline is set up to push the latest tag and the commit has as a tag.
+The image is pushed to https://quay.io/repository/jaeichle/redhat-cop-collections-ee - the pipeline is set up to push the latest tag and the commit hash as a tag.
 
 === How?
 
