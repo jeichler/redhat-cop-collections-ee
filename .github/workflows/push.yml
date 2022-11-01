@@ -1,0 +1,36 @@
+name: Push Image
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  publish-lazy-me:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install  ansible-builder
+      run: pip install ansible-builder
+    - name: Checkout
+      uses: actions/checkout@v2.0.0
+    - name: Split repo string for image name
+      uses: jungwinter/split@v2
+      id: split
+      with:
+        msg: ${{ github.repository }}
+        separator: '/'
+    - name: Build Image with Buildah
+      id: build-image
+      uses: redhat-actions/buildah-build@v2
+      with:
+        image: ${{ steps.split.outputs._1 }}
+        tags: latest ${{ github.sha }}
+        containerfiles: |
+          ./context/Containerfile
+    - name: Push to quay.io
+      uses: redhat-actions/push-to-registry@v2
+      with:
+        image: ${{ steps.build-image.outputs.image }}
+        tags: ${{ steps.build-image.outputs.tags }}
+        registry: quay.io/jaeichle
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
