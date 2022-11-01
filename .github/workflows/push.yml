@@ -2,6 +2,8 @@ name: Push Image
 on:
   workflow_dispatch:
   push:
+    paths-ignore:
+      - 'README.adoc'
     branches:
       - main
 jobs:
