@@ -11,6 +11,6 @@ collections:
   - name: redhat_cop.ah_configuration
     version: 0.9.2
   - name: redhat_cop.ee_utilities
-    version: 2.0.4
+    version: 2.0.6
   - name: redhat_cop.aap_utilities
     version: 2.2.3
