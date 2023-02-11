@@ -5,6 +5,8 @@
 I am lazy and every now and then use the collections from the https://github.com/redhat-cop[Red Hat CoP] for my homelab automation.
 Since I do like to use the VSCode Plugin for Ansible, I wanted to have an EE based on the creator-ee with all the collections installed.
 
+However: be aware this is not a good practice for EEs. It's really just me being lazy.
+
 === Where?
 
 The image is pushed to https://quay.io/repository/jaeichle/redhat-cop-collections-ee - the pipeline is set up to push the latest tag and the commit hash as a tag.
