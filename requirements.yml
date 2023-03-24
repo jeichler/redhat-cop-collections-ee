@@ -3,7 +3,7 @@ collections:
   - name: kubernetes.core
     version: 2.4.0
   - name: redhat_cop.controller_configuration
-    version: 2.2.5
+    version: 2.3.1
   - name: ansible.posix
     version: 1.5.1
   - name: community.okd
