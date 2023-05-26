@@ -3,7 +3,7 @@ version: 1
 
 build_arg_defaults:
   # renovate: datasource=docker depName=quay.io/ansible/creator-ee
-  EE_BASE_IMAGE: 'quay.io/ansible/creator-ee:latest'
+  EE_BASE_IMAGE: quay.io/ansible/creator-ee:latest
 
 dependencies:
   galaxy: requirements.yml
