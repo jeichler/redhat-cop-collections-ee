@@ -12,7 +12,6 @@
         "EE_BASE_IMAGE: (?<depName>\\S*):(?<currentValue>\\S*)"
       ],
       "datasourceTemplate": "docker",
-      "versioningTemplate": "semver"
     }
   ]
 }
