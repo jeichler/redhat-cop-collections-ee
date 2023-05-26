@@ -9,7 +9,7 @@
         "^execution-environment\\.yml$"
       ],
       "matchStrings": [
-        "EE_BASE_IMAGE:[\\W]*(?<depName>.*?):(?<currentValue>.*?)[\\W]*\\n"
+        "EE_BASE_IMAGE:[\\W]*(?<depName>.*?):(?<currentValue>.*?)@(?<currentDigest>sha256:[a-f0-9]+)\\s"
       ],
       "datasourceTemplate": "docker"
     }
