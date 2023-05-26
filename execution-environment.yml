@@ -2,7 +2,7 @@
 version: 1
 
 build_arg_defaults:
-  EE_BASE_IMAGE: quay.io/ansible/creator-ee:v0.17.0
+  EE_BASE_IMAGE: quay.io/ansible/creator-ee:v0.17.0@sha256:064ecfa3e79ecb3f964ce047d0edcff37938bd095e1c3e134dfa8a7998b1e152
 
 dependencies:
   galaxy: requirements.yml
