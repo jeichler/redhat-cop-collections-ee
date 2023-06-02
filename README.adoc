@@ -1,3 +1,5 @@
+> :warning: Archived. You'll find all EE's [in tis repo](https://github.com/jeichler/ee) - including an updated version of this one. It's pushed to https://quay.io/repository/jaeichle/ee-redhat-cop-collections
+
 :hide-uri-scheme:
 
 === Why?
